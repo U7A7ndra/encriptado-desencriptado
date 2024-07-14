@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador - Desencriptador</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <main>
+      <section class="seccionTexto">
+        <img src="imagenes/alura.svg" alt="imagen alura" class="imagenAlura" />
+        <article class="articuloTextoAEncriptarYDesencriptar">
+          <textarea
+            placeholder="Ingrese el texto aquí"
+            id="textoAEncriptarYDesencriptar"
+            oninput="validarTexto(this)"
+          ></textarea>
+
+          <span class="textoWarning">
+            <img src="/imagenes/warning.svg" alt="icono warning" />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </span>
+          <footer class="articuloFooter">
+            <button onclick="encriptarTexto()" class="botonEncriptar">
+              Encriptar
+            </button>
+            <button onclick="desencriptarTexto()" class="botonDesencriptar">
+              Desencriptar
+            </button>
+          </footer>
+        </article>
+        <article class="articuloTextoDesencriptado">
+          <p id="textoDesencriptado"></p>
+          <div class="seccionNoEncontardo">
+            <img src="/imagenes/desencriptar.svg" alt="imagen desencriptar" id="imagenDesencriptar"/>
+            <span>
+              <p class="spanMensajeNoEncontrado">
+                Ningún mensaje fue encontrado
+              </p>
+              <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </span>
+          </div>
+
+          <footer class="articuloFooter">
+            <button onclick="copiarTexto()" class="botonCopiar">
+              Copiar
+            </button>
+          </footer>
+          <!-- <p id="historialTextosDesencriptados"></p> -->
+        </article>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
